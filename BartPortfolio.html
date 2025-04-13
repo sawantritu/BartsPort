@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bartosz Tutak Portfolio | Game Designer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+      padding: 5rem 2rem;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      color: #f39c12;
+      z-index: 1;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+    }
+
+    header h1:hover {
+      animation: glitch 0.3s linear infinite;
+      text-shadow: 2px 0 red, -2px 0 blue;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: #bbb;
+      margin-top: 1rem;
+      z-index: 1;
+      position: relative;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      animation: fadeUp 1s ease-in;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: #f39c12;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .job {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(243, 156, 18, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .job:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rgba(243, 156, 18, 0.2);
+    }
+
+    .job h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .job span {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .job p {
+      margin: 1rem 0;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #121212;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes glitch {
+      0% {
+        transform: translate(0);
+      }
+
+      20% {
+        transform: translate(-2px, 2px);
+      }
+
+      40% {
+        transform: translate(2px, -2px);
+      }
+
+      60% {
+        transform: translate(-1px, 1px);
+      }
+
+      80% {
+        transform: translate(1px, -1px);
+      }
+
+      100% {
+        transform: translate(0);
+      }
+    }
+
+    /* Snowflake animation */
+    .snowflake {
+      position: absolute;
+      background-color: rgba(243, 156, 18, 0.7); /* Orange color with transparency */
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: snowfall 5s linear infinite;
+    }
+
+    @keyframes snowfall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(calc(100vh + 100px));
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Bartosz Tutak's Portfolio</h1>
+    <p>Game Art Designer | 3D Artist | Logistics Specialist</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I'm Bartosz Tutak, a game designer with a strong background in logistics and a deep passion for 3D environments and storytelling. With a Bachelor's in Game Art from De Montfort University, I thrive on merging technical precision with creative ambition. Whether it’s designing eerie post-apocalyptic worlds or optimizing workflows in real warehouses, I bring immersive attention to detail in everything I do.
+    </p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="grid">
+      <div class="job">
+        <h3>CEVA Logistics / Amazon XL</h3>
+        <span>Sep 2022 – Present</span>
+        <p>
+          As a Logistics Coordinator, I ensured the efficient flow of large-scale goods within Amazon XL. Leveraging Dock Master and WMS platforms, I scheduled daily deliveries, reduced waiting times, and optimized slot availability.
+        </p>
+        <p>
+          I drove warehouse efficiency through Kaizen events and 5S audits, often leading cross-functional teams to identify and eliminate waste. My work directly contributed to improved KPI scores, streamlined communication, and safer workspaces.
+        </p>
+        <p><strong>Skills:</strong> Lean Logistics, Process Optimization, Cross-Team Leadership, WMS & Dock Scheduling</p>
+      </div>
+      <div class="job">
+        <h3>Games Workshop Ltd</h3>
+        <span>May 2022 – Jul 2022</span>
+        <p>
+          Operated Very Narrow Aisle (VNA) vehicles in a high-density warehouse, ensuring fragile and high-value stock was stored with precision. My role demanded coordination with picking teams and inventory specialists to maintain continuous workflow.
+        </p>
+      </div>
+      <div class="job">
+        <h3>Toyota Motor Manufacturing UK</h3>
+        <span>Feb 2022 – May 2022</span>
+        <p>
+          I applied protective coatings and sealants on automotive components in a fast-paced environment. Using visual inspection techniques and robotic-assisted systems, I ensured every part met Toyota’s strict standards.
+        </p>
+        <p>
+          Regularly collaborated with engineers to troubleshoot coating inconsistencies, helping reduce material waste by 12% over the contract period.
+        </p>
+      </div>
+      <div class="job">
+        <h3>PCC Aerostructures</h3>
+        <span>Oct 2021 – Feb 2022</span>
+        <p>
+          I worked on aerospace parts used in Airbus and Rolls-Royce engines. My responsibilities included inspection, handling according to aviation standards, and quality documentation, ensuring components passed all QA checks before assembly.
+        </p>
+        <p><strong>Key Highlight:</strong> Zero handling-related defects during my tenure.</p>
+      </div>
+      <div class="job">
+        <h3>Refresco</h3>
+        <span>Sep 2020 – Jul 2021</span>
+        <p>
+          At one of Europe's largest bottling plants, I oversaw material movement, tracked product flows via SAP WMS, and ensured safety compliance. Played a key role in increasing hourly throughput by optimizing forklift routing paths.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="job">
+        <h3>De Montfort University</h3>
+        <span>2016 – 2019</span>
+        <p>
+          B.A. in Game Art Design — Specialized in 3D environments, character modeling, and PBR texturing. Produced game-ready assets in Maya, ZBrush, and Substance Painter. Participated in team-based level design projects using Unity and Unreal Engine.
+        </p>
+        <p>
+          Final Year Project: Created a dystopian cityscape inspired by Blade Runner, showcasing modular design and lighting storytelling.
+        </p>
+      </div>
+      <div class="job">
+        <h3>De Montfort University</h3>
+        <span>2015 – 2016</span>
+        <p>
+          Foundation Year in Art & Design — Mastered visual storytelling, traditional drawing, and design fundamentals. Developed a strong base for digital and interactive media.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="job">
+        <h3>DMU Global Game Jam - "Pulse"</h3>
+        <span>Jan 2017</span>
+        <p>
+          Collaborated in a 3-person team to create a fully playable 3D prototype in 48 hours. Designed eerie environments and pulse-based mechanics where players explore a biotech lab with only sonic feedback to guide them.
+        </p>
+        <p><strong>Tools:</strong> Unity, Maya, Photoshop, Git</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Bartosz Tutak | Designed with passion for world-building</p>
+  </footer>
+
+  <script>
+    // Snowflakes creation function
+    const createSnowflakes = () => {
+      for (let i = 0; i < 200; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.style.width = `${Math.random() * 5 + 2}px`; // Random size
+        snowflake.style.height = snowflake.style.width;
+        snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+        snowflake.style.animationDuration = `${Math.random() * 4 + 3}s`; // Randomize fall speed
+        document.body.appendChild(snowflake);
+      }
+    }
+
+    createSnowflakes();
+  </script>
+</body>
+
+</html>
